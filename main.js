@@ -15,13 +15,13 @@ function OnEnter(e){
     if(e.key === "Enter"){
         previous_inputs.push(command_input.value);
         commandHandler(command_input.value);
-        console.log(command_input.value);
     }
 }
 
 function commandHandler(cmd){
     switch(cmd.toLowerCase()){
         case "help":
+            addLines(help);
             break;
         case "aboutme":
             break;
@@ -39,6 +39,26 @@ function commandHandler(cmd){
             console.log("This command does not exist")
     }
 }
+
+function addLines(command){
+    command.forEach(element => {
+        typewriter(element, 60, 0);
+    });
+   
+
+}
+
+
+
+function typewriter(text,speed,index){
+if  (index < text.length) {
+        document.getElementById("text").innerHTML += text.charAt(index);
+        index++
+        setTimeout(typewriter(text, speed, index), 80)
+    }
+}
+
+
 
 
 
