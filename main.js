@@ -6,6 +6,8 @@
 const command_input = document.getElementById("commands");
 const previous_inputs = [];
 
+const textstart = document.getElementById("text");
+
 command_input.addEventListener("keypress", OnEnter);
 
 //Init
@@ -21,7 +23,7 @@ function OnEnter(e){
 function commandHandler(cmd){
     switch(cmd.toLowerCase()){
         case "help":
-            addLines(help);
+            readLines(help, 500);
             break;
         case "aboutme":
             break;
@@ -40,23 +42,38 @@ function commandHandler(cmd){
     }
 }
 
-function addLines(command){
-    command.forEach(element => {
-        typewriter(element, 60, 0);
-    });
-   
-
-}
-
-
-
-function typewriter(text,speed,index){
-if  (index < text.length) {
-        document.getElementById("text").innerHTML += text.charAt(index);
-        index++
-        setTimeout(typewriter(text, speed, index), 80)
+function addLines(text, time){
+    var t = "";
+    for (let i = 0; i < text.length; i++) {
+        if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
+            t += "&nbsp;&nbsp;";
+            i++;
+        } 
+        else {
+            t += text.charAt(i);
+        }
     }
+    setTimeout(function() {
+    var next = document.createElement("p");
+    next.innerHTML = t;
+
+    textstart.parentNode.insertBefore(next, textstart);
+
+    window.scrollTo(0, document.body.offsetHeight);
+  }, time);
+
 }
+
+
+function readLines(command, time){
+    command.forEach(function(text ,index) {
+        addLines(text, index * time); 
+    });
+}
+
+
+
+
 
 
 
