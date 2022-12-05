@@ -1,75 +1,80 @@
-// var, let, const (Variables)
-// strings, numbers, bool, null, undefined, symbol
-//single element selectors
-//multiple element selectors
 
-const command_input = document.getElementById("commands");
-const previous_inputs = [];
+var typedtext = document.getElementById("typed-text");
+var input = document.getElementById("commands");
 
-const textstart = document.getElementById("text");
+setTimeout(function() {
+  readLines(banner, 60, "colorGreen");
+  typedtext.focus();
+}, 100);
 
-command_input.addEventListener("keypress", OnEnter);
 
-//Init
-index = previous_inputs.length;
+input.addEventListener("keypress", function(e){
+  if(e.keyCode === 13){
+    addLines("website@website.com>>" +input.value);
+    readCommand(input.value);
+    input.value = "";
+    
+  }
+} )
 
-function OnEnter(e){
-    if(e.key === "Enter"){
-        previous_inputs.push(command_input.value);
-        commandHandler(command_input.value);
-    }
+function readCommand(cmd){
+  switch (cmd.toLowerCase()) {
+    case "help":
+      console.log("help")
+      readLines(help, 60, "colorGray");
+      break;
+    case "aboutme":
+      console.log("About me")
+      readLines(aboutme, 60);
+      break;
+    case "socials":
+      readLines(social, 60);
+      break;
+    case "contact":
+      readLines(contact, 60);
+      break;
+    case "projects":
+      readLines(projects, 60);
+      break;
+    default:
+      console.log("default")
+      addLines("Error 404; This command does not exist. Type 'help' for a list of commands")
+      break;
+  }
 }
 
-function commandHandler(cmd){
-    switch(cmd.toLowerCase()){
-        case "help":
-            readLines(help, 500);
-            break;
-        case "aboutme":
-            break;
-        case "portfolio":
-            break;
-        case "socials":
-            break;
-        case "contact":
-            break;
-        case "clear":
-            break;
-        case "themes":
-            break;
-        default:
-            console.log("This command does not exist")
+function addLines(text, time, attribute){
+  var t = "";
+  for(let i = 0; i < text.length; i++){
+    if(text.charAt(i) == " " && text.charAt(i+1) == " "){
+      t += "&nbsp;&nbsp;";
+      i++;
     }
-}
-
-function addLines(text, time){
-    var t = "";
-    for (let i = 0; i < text.length; i++) {
-        if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
-            t += "&nbsp;&nbsp;";
-            i++;
-        } 
-        else {
-            t += text.charAt(i);
-        }
+    else{
+      t += text.charAt(i);
     }
-    setTimeout(function() {
+  }
+  setTimeout(function(){
     var next = document.createElement("p");
     next.innerHTML = t;
-
-    textstart.parentNode.insertBefore(next, textstart);
-
+    next.id = attribute;
+    typedtext.parentNode.insertBefore(next, typedtext);
     window.scrollTo(0, document.body.offsetHeight);
+    
   }, time);
 
 }
 
-
-function readLines(command, time){
-    command.forEach(function(text ,index) {
-        addLines(text, index * time); 
-    });
+function readLines(text, time, attribute){
+  text.forEach(function(item, index){
+    addLines(item, index* time, attribute);
+  });
 }
+
+function Expand(obj){
+  if (!obj.savesize) obj.savesize=obj.size;
+  obj.size=Math.max(obj.savesize,obj.value.length);
+ }
 
 
 

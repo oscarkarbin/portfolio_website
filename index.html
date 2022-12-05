@@ -9,21 +9,18 @@
   </head>
   <body>
     <main>
-        <h1>Welcome to My Website</h1>
         <section class="contaienr">
-            <div>
-                <h1>help command</h1>
-                <label for="commands">commands</label>
-                <input type="text" id="commands">
-            </div>
             <div id="terminal">
-              <a id="text" ></a>
+              <a id="typed-text"></a>
+            </div>
+            <div id=inputfield>
+                <label for="commands">website@website.com></label>
+                <input type="text" id="commands" size="1" onkeyup="Expand(this);" autofocus>
+                <a>▮</a>
             </div>
         </section>
         <script src="main.js"></script> 
         <script src="commands.js"></script> 
-    </main>
-
-
+      </main>
   </body>
 </html>

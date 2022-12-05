@@ -1,0 +1,67 @@
+body{
+    background: #222;
+    color:#02B875 ;
+    font-family: monospace;
+    margin-left: 16px;
+    font-size: 16px;
+}
+
+.cmd{
+    margin-left: 24px;
+    color: #6AD5CB;
+}
+
+
+#commands{
+    border: 0;
+    outline: none;
+    background: white;
+    color: #6AD5CB; 
+    font-size: 16px;
+    width: 16px;
+}
+
+
+
+p{
+    display: block;
+    line-height: 1.3em;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+}
+
+#inputfield a {
+    font-weight: 100;
+    font-size: 16px;
+    color: #2E3D48;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: white;
+    }
+  }
+
+#colorGray{
+    color: #D4D2D5;
+}
+
+#colorGreen{
+    color: #02B875;
+}
+
+#colorAqua{
+    color: #6AD5CB;
+}
+  
+
+
+
+
+
