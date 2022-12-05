@@ -10,17 +10,28 @@
   <body>
     <main>
         <section class="contaienr">
-            <div id="terminal">
-              <a id="typed-text"></a>
-            </div>
-            <div id=inputfield>
-                <label for="commands">website@website.com></label>
-                <input type="text" id="commands" size="1" onkeyup="Expand(this);" autofocus>
-                <a>▮</a>
-            </div>
+        
+            <a id="typed-text"></a>
+            
+            <div id="terminal" onclick="$('setter').focus();">
+          
+              <textarea 
+              type="text" 
+              id="setter" 
+              onkeydown="writeit(this, event);moveIt(this.value.length, event)" 
+              onkeyup="writeit(this, event)" 
+              onkeypress="writeit(this, event);"></textarea>
+
+              <div id="getter">
+                <span id="writer"></span><b class="cursor" id="cursor"></b>
+              </div>
+
+            </div>   
         </section>
         <script src="main.js"></script> 
-        <script src="commands.js"></script> 
+        <script src="commands.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="caret.js"></script> 
       </main>
   </body>
 </html>

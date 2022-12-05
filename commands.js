@@ -43,7 +43,7 @@ const banner =[
     "╚█████╔╝██████╔╝╚█████╔╝██║░░██║██║░░██║  ██║░╚██╗██║░░██║██║░░██║██████╦╝██║██║░╚███║",
     "░╚════╝░╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝  ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝╚═╝░░╚══╝<br><br>",
     "<div id=colorGray>Welcome to my personal web terminal. Type <span id=colorAqua>'help'</span> for list of available commands.</div>",
-    "<div id=colorGray>For 'normal' website, press the button in upper right corner.</div><br><br>"                                                                                                                                                           
+    "<div id=colorGray>For 'normal' website, press the button in upper right corner.</div><br>"                                                                                                                                                           
 ]
 
 

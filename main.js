@@ -1,6 +1,6 @@
 
 var typedtext = document.getElementById("typed-text");
-var input = document.getElementById("commands");
+var input = document.getElementById("setter");
 
 setTimeout(function() {
   readLines(banner, 60, "colorGreen");
@@ -10,10 +10,10 @@ setTimeout(function() {
 
 input.addEventListener("keypress", function(e){
   if(e.keyCode === 13){
+    e.preventDefault();
     addLines("website@website.com>>" +input.value);
     readCommand(input.value);
     input.value = "";
-    
   }
 } )
 
@@ -71,10 +71,13 @@ function readLines(text, time, attribute){
   });
 }
 
-function Expand(obj){
-  if (!obj.savesize) obj.savesize=obj.size;
-  obj.size=Math.max(obj.savesize,obj.value.length);
- }
+
+
+
+ 
+ 
+
+  
 
 
 
