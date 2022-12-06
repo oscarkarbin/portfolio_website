@@ -25,20 +25,24 @@ function readCommand(cmd){
       break;
     case "aboutme":
       console.log("About me")
-      readLines(aboutme, 60);
+      readLines(aboutme, 60,"colorGray");
       break;
     case "socials":
-      readLines(social, 60);
+      readLines(social, 60,"colorGray");
       break;
     case "contact":
-      readLines(contact, 60);
+      readLines(contact, 60,"colorGray");
       break;
     case "projects":
-      readLines(projects, 60);
+      readLines(projects, 60, "colorGray");
+      break;
+    case "clear":
+      break;
+    case "banner":
       break;
     default:
-      console.log("default")
-      addLines("Error 404; This command does not exist. Type 'help' for a list of commands")
+      console.log("default");
+      addLines("Error 404; This command does not exist. Type <span id=colorAqua>'help'</span> for a list of commands", 60, "colorGray");
       break;
   }
 }
