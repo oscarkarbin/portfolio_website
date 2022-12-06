@@ -11,7 +11,7 @@ const help = [
 
 const aboutme = [
     "<br>",
-    "Hello,",//Finish thisd
+    "Hello 😎 ,",//Finish thisd
     "My name is Oscar and I am software engineering student at Chalmers university of technology. Before enrolling chalmers",
     "I had never written single line of code, however I quickly fell in love with problem solving aspect while working together", 
     "with friends/colleauges. Currently I'm working part-time at Volvo Cars as a forklift operator. However I'm actively looking for new",
@@ -24,17 +24,24 @@ const aboutme = [
 ]
 
 const social = [
-    "LinkedIn:   https://www.linkedin.com/in/oscar-karbin-b67366252/", 
+    "<br>",
+    "LinkedIn:          <a href=https://www.linkedin.com/in/oscar-karbin-b67366252/ target='_blank' id=colorAqua>Profile Link</a>" ,
+    "GitHub:            <a href=https://github.com/oscarkarbin target='_blank' id =colorAqua>Profile Link</a>",
+    "<br>"
+     
 ]
 
 const contact = [
-    "E-mail     <karbin.oscar2002@gmail.com ", //Open email when clicked 
-    "LinkedIn   <a href= https://www.linkedin.com/in/oscar-karbin-b67366252 target='_blank' id=colorAqua>Click Here</a>",
-    "Phone      +46720230286"
+    "<br>",
+    "E-mail     <a href = mailto:karbin.oscar2002@gmail.com id=colorAqua>karbin.oscar2002@gmail.com</a> ", //Open email when clicked 
+    "LinkedIn   <a href= https://www.linkedin.com/in/oscar-karbin-b67366252 target='_blank' id=colorAqua>Profile Link</a>",
+    "Phone      +46720230286",
+    "<br>"
 ]
 
 const projects = [
-    "PayMe  <a href=https://github.com/dinohromic/PayMe2.0 id=colorAqua> Github </a>",
+    "<br>",
+    "PayMe  <a href=https://github.com/dinohromic/PayMe2.0 target='_blank' id=colorAqua> Github Link </a>",
     "[University group project]", 
     "PayMe is a mobile application made natively for android. It was made with: ",
     "object oriented Java, XML, Junit and JSON in android studios",
@@ -45,7 +52,7 @@ const projects = [
     "outgoing and ingoing debts for each member in the group. This debt can later on be",
     "settled through the app.<br><br>" ,
 
-    "Personal portfolio website (This website :D)  Link",
+    "Personal portfolio website (This website :D)  <a href=https://github.com/oscarkarbin/portfolio_website target='_blank' id=colorAqua>Github Link</a>",
     "[Individual project]",
     "The reason behind this website is to learn/try basic web development. It is made with:",
     "JavaScript, HTML and CSS. The inspiration behind the theme is typical 'terminal' with added",
@@ -53,7 +60,8 @@ const projects = [
     "terminal. I also added simple subsection of the website that works with mobile devices.",
     "Please keep in mind that this is my first time using HTML, JavaScript and CSS<br><br>",
 
-    "Project 3 (Under construction...)"
+    "Project 3 (Under construction...)",
+    "<br>"
 ]
 
 const banner =[

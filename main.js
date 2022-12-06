@@ -37,6 +37,7 @@ function readCommand(cmd){
       readLines(projects, 60, "colorGray");
       break;
     case "clear":
+      window.location.reload();
       break;
     case "banner":
       break;
