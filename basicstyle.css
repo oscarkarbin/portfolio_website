@@ -1,0 +1,39 @@
+body{
+    margin-left: auto;
+    margin-right: auto;
+    background: #222222;
+    color: white;
+    font-family: consolas;
+    max-width: 380px;
+}
+
+main{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+
+#logo img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    max-height: 64px;
+    display: block;
+}
+
+#colorAqua{
+    color: #6AD5CB;
+}
+
+
+nav{
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+}
+
+nav a{
+    color: white;
+    margin: 8px;
+}

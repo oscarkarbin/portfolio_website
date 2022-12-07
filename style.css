@@ -6,6 +6,22 @@ body{
     font-size: 16px;
 }
 
+button{
+    margin: 8px;
+    border-color: #02B875;
+    border-style: dotted;
+    background-color: #222;
+    color: #02B875;
+    height: 64px;
+    width: 64px;
+    float: right;
+}
+
+button:hover{
+    color: #6AD5CB;
+    border-color: #6AD5CB;
+}
+
 .cmd{
     margin-left: 24px;
     color: #6AD5CB;
