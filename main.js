@@ -11,7 +11,7 @@ setTimeout(function() {
 input.addEventListener("keypress", function(e){
   if(e.keyCode === 13){
     e.preventDefault();
-    addLines("website@website.com>>" +input.value);
+    addLines("oscarkarbin@github.io>>" +input.value);
     readCommand(input.value);
     input.value = "";
   }
